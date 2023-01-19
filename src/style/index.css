@@ -1,0 +1,270 @@
+/* base styles */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #222;
+  font-family: Lusitana, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button{
+  background-color: rgb(150, 150, 150);
+  border: none;
+  border-radius: 20px;
+  /*box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
+  color: rgb(51, 4, 147);
+  padding: 10px 27px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin: 0 0 1em 0;
+}
+
+h2 {
+  font-size: 1.85rem;
+  color: #858585;
+}
+
+h3 {
+  font-family: Goudy Old Style;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+h4 {
+  font-family: Goudy Old Style;
+  font-size: 1.25rem;
+  color: #525252;
+  margin: 0 0 0.25em;
+}
+h5 {
+  font-size: 1.25rem;
+  color: #525252;
+  margin: 0 0 0.25em;
+}
+
+h4 + span {
+  display: block;
+  margin-bottom: 1.65em;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+}
+
+ul {
+  font-family: Goudy Old Style;
+  list-style: none;
+  font-size: 1.125rem;
+  margin: 0;
+  padding: 0;
+}
+
+/*ul li {*/
+/*  margin-bottom: 1em;*/
+/*}*/
+
+/* nav & links */
+
+a {
+  color: #f79426;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+nav a {
+  display: block;
+  font-size: 1.25rem;
+  /*color: #DD1F26;*/
+  color: rgb(255, 255, 255);
+  padding-bottom: 0.15em;
+  border-bottom: 2px solid transparent;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/*nav a:last-child {*/
+/*  float: right;*/
+/*}*/
+
+nav a:hover,
+.nav-active {
+  color: rgb(43, 0, 255);
+}
+
+/* components & assets */
+
+.logo {
+  width: 220px;
+}
+
+.img-feat {
+  width: 100%;
+  border-radius: 0.35em;
+  margin-bottom: 2em;
+}
+
+form {
+  font-size: 1.25rem;
+  margin: 2em auto;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 1.5em;
+}
+
+input {
+  outline: none;
+  font-size: 1em;
+  margin-top: 0.35em;
+  display: block;
+  width: 60%;
+  padding: 0.5em;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+}
+
+input[type=text]:focus {
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
+}
+
+input:focus {
+  outline-color: rgb(0, 0, 0);
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  color: rgb(49, 12, 123);
+  font-weight: bold;
+  padding: 0.65em 0;
+  background-color: lavender;
+  border: none;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(173, 172, 174);
+  color: white;
+}
+
+/* layout */
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 1.75em 0;
+}
+
+.not-found {
+  text-align: center;
+}
+
+.signUp {
+  margin-left: 260px;
+}
+
+.not-found::before {
+  content: "404";
+  margin-right: 0.35em;
+}
+
+/*footer.container {*/
+/*  margin-top: 150px;*/
+/*  padding: 2.25em 0;*/
+/*  border-top: 1px solid rgb(219, 219, 219);*/
+/*  text-align: center;*/
+/*}*/
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container2 {
+  width: 100%;
+  max-width: 1200px;
+  padding: 1%;
+}
+
+.footer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position : absolute;
+  bottom : 0;
+  height : 40px;
+  margin-top : 40px;
+  border-top: 1px solid rgb(219, 219, 219);
+  text-align: center;
+}
+
+.imgDetails {
+  margin-right: 30px;
+  margin-bottom: 100px;
+  float:left;
+  width:400px;
+}
+
+.imgDetails2 {
+  float:left;
+  width:400px;
+}
+
+/* media queries */
+@media (max-width: 767px) {
+  nav a {
+    padding: 0.35em 0;
+  }
+}
+
+@media (min-width: 768px) {
+  header,
+  nav {
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+  }
+  header.container {
+    margin-bottom: 1em;
+  }
+  nav {
+    margin-left: auto;
+  }
+  nav a {
+    margin-left: 1.25em;
+  }
+  .nav-active {
+    border-bottom: 2px solid currentColor;
+  }
+  .workshops {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  form {
+    width: 60%;
+  }
+}
