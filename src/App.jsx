@@ -9,6 +9,7 @@ import {Alert} from "react-bootstrap";
 import facade from "./apiFacade.js";
 import Footer from "./components/Footer.jsx";
 import SignUp from "./components/SignUp.jsx";
+import Conferences from "./components/Conferences.jsx";
 
 function App() {
     //usestates her
@@ -29,7 +30,7 @@ function App() {
                         <GetJoke setErrorMessage={setErrorMessage}/> : <h4>Get back to work!</h4>}/>
                     <Route path="/signUp" element={<SignUp/>}/>
                     <Route path="*" element={<h1 className="not-found">Page Not Found</h1>}/>
-                    
+                    <Route path="/conferences" element={<Conferences/>}/>
                 </Routes>
                 <Footer />
             </div>
