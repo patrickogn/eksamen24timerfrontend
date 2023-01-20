@@ -5,7 +5,7 @@ const Conferences = () => {
   const [conference, setConference] = useState(null); 
 
   useEffect(() => {
-    fetch("https://http://patrickognielsen.dk/api/conf/all")
+    fetch("https://patrickognielsen.dk/tomcat/24timers/api/conf/all")
       .then((response) => response.json())
       .then((data) => {
         setConference(data);
@@ -14,7 +14,7 @@ const Conferences = () => {
   }, []);
 
   async function handleClick(id) {
-    const response = await fetch(`https://http://patrickognielsen.dk/24timers/api/conf/${id}`);
+    const response = await fetch(`https://patrickognielsen.dk/tomcat/24timers/api/conf/${id}`);
     const json = await response.json();
     setData({...data, [id]: json}); // opdaterer state med ny data
   }
