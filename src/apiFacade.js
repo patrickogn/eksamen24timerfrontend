@@ -81,6 +81,11 @@ function apiFacade() {
         return fetch(URL + "/api/conf/all", options).then(handleHttpErrors)
     }
 
+    const fetchSpeakers =() => {
+        const options = makeOptions("GET")
+        return fetch(URL + "/api/speaker/all", options).then(handleHttpErrors)
+    }
+
     const getUserRoles = () =>
     {
         const token = getToken()
@@ -118,6 +123,7 @@ function apiFacade() {
     return {
         fetchJoke,
         fetchConferences,
+        fetchSpeakers,
         makeOptions,
         setToken,
         getToken,

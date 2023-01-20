@@ -10,6 +10,8 @@ import facade from "./apiFacade.js";
 import Footer from "./components/Footer.jsx";
 import SignUp from "./components/SignUp.jsx";
 import Conferences from "./components/Conferences.jsx";
+import Speakers from './components/Speakers.jsx';
+
 
 function App() {
     //usestates her
@@ -31,6 +33,8 @@ function App() {
                     <Route path="/signUp" element={<SignUp/>}/>
                     <Route path="*" element={<h1 className="not-found">Page Not Found</h1>}/>
                     <Route path="/conferences" element={<Conferences/>}/>
+                    <Route path="/speakers" element={<Speakers/>}/>
+
                 </Routes>
                 <Footer />
             </div>

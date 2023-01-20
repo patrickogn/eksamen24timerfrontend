@@ -12,6 +12,7 @@ function NavbarComp() {
                 <NavLink to={"/login"} className={getClass}>Login</NavLink>
                 <NavLink to={"/joke"} className={getClass}>Joke</NavLink>
                 <NavLink to={"/conferences"} className={getClass}>Conferences</NavLink>
+                <NavLink to={"/speakers"} className={getClass}>Speakers</NavLink>
             </nav>
         </header>
     );
