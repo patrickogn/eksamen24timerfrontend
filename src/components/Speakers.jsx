@@ -6,7 +6,7 @@ const Speakers = () => {
   const [speakers, setSpeakers] = useState(null); 
 
   useEffect(() => {
-    fetch("http://localhost:8080/24timers/api/speaker/all")
+    fetch("https://http://patrickognielsen.dk/24timers/api/speaker/all")
       .then((response) => response.json())
       .then((data) => {
         setSpeakers(data);
@@ -15,7 +15,7 @@ const Speakers = () => {
   }, []);
 
   async function handleClick(id) {
-    const response = await fetch(`http://localhost:8080/24timers/api/speaker/${id}`);
+    const response = await fetch(`https://http://patrickognielsen.dk/24timers/api/speaker/${id}`);
     const json = await response.json();
     setData({...data, [id]: json}); // opdaterer state med ny data
   }

@@ -20,7 +20,7 @@ function App() {
 
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename='test'>
             <div className="container">
                 <Navbarcomp/>
                 <Routes>

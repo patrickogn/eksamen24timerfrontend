@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import facade from "../apiFacade";
-import chucknorris from "../assets/chucknorris.jpg";
+
 
 function GetJoke({setErrorMessage}) {
     const [jokeFromServer, setJokeFromServer] = useState("Loading...")
